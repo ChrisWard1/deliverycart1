@@ -1,0 +1,54 @@
+@page
+@model deliverycart1.Pages_SHopping.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Vendor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Vendor.storeName" class="control-label"></label>
+                <input asp-for="Vendor.storeName" class="form-control" />
+                <span asp-validation-for="Vendor.storeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendor.storeAddress" class="control-label"></label>
+                <input asp-for="Vendor.storeAddress" class="form-control" />
+                <span asp-validation-for="Vendor.storeAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendor.storeCity" class="control-label"></label>
+                <input asp-for="Vendor.storeCity" class="form-control" />
+                <span asp-validation-for="Vendor.storeCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendor.storeState" class="control-label"></label>
+                <input asp-for="Vendor.storeState" class="form-control" />
+                <span asp-validation-for="Vendor.storeState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendor.storeZip" class="control-label"></label>
+                <input asp-for="Vendor.storeZip" class="form-control" />
+                <span asp-validation-for="Vendor.storeZip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
